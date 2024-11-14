@@ -1,0 +1,44 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.container >h1{
+    text-align: center;
+}
+
+.Content-1{
+    margin-top: 2rem;
+}
+
+.Input{
+    display: flex;
+}
+
+.Input > div > button{
+    margin-left: 1rem;
+}
+
+.Input > div > input{
+    width: 50rem;
+    font-size: 2rem;
+}
+
+.todolist{
+ display: flex;
+ justify-content: space-between;  
+}
+
+.Content-2{
+    margin-top: 4rem;
+}
+
+.bnt >button{
+    margin: 0 1rem;
+}
+
+.div{
+    font-size: 2rem;
+}
