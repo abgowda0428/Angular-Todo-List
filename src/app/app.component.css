@@ -29,6 +29,7 @@
 .todolist{
  display: flex;
  justify-content: space-between;  
+ margin-top: 2rem;
 }
 
 .Content-2{
@@ -41,4 +42,6 @@
 
 .div{
     font-size: 2rem;
+    /* width: 800px;
+    overflow: scroll; */
 }
