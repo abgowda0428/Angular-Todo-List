@@ -18,6 +18,11 @@ export class AppComponent implements OnInit{
   todoarray: any[] = [];
 
   ngOnInit(): void {
+
+    const localData = localStorage.getItem('TodoItem');
+    if(localData != null){
+      this.todoarray = JSON.parse(localData);
+    }
     
   }
 
@@ -26,8 +31,8 @@ export class AppComponent implements OnInit{
   OnAdd() {
     
       this.todoarray.push(this.todoList); 
+      localStorage.setItem('TodoItem',JSON.stringify(this.todoarray));
       this.todoList = "" ; 
-    
   }
 
   OnClear(){
@@ -36,6 +41,10 @@ export class AppComponent implements OnInit{
 
   OnDelete(){
     
+  }
+
+  OnComplete(){
+
   }
 
 }
