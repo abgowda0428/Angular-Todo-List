@@ -32,7 +32,7 @@
  margin-top: 2rem;
 }
 
-.Content-2{
+.Content-2,.Content-3{
     margin-top: 4rem;
 }
 
@@ -40,6 +40,17 @@
     margin: 0 1rem;
 }
 
+.Contenttwohead{
+    display: inline-block;
+    margin-left: 1rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.container >h1{
+    font-weight: bold;
+    text-decoration: line-through;
+}
 .div{
     font-size: 2rem;
     /* width: 800px;

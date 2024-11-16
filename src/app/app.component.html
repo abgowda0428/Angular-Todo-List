@@ -1,10 +1,12 @@
+
 <div class="container">
   <h1>TO DO LIST</h1>
+  
 
   <div class="Content-1">
     <form class="Input">
       <div>
-        <input type="text" name="Todoitem" placeholder="Enter the text..." [(ngModel)]="todoList">
+        <input type="text" name="Todoitem" placeholder="Enter the text..." [(ngModel)]="todoItems.todoContent">
       </div>
       <div>
         <button type="button" class="btn-floating btn-large waves-effect waves-light blue" (click)="OnAdd()">
@@ -18,18 +20,73 @@
   </div>
 
   <ul class="Content-2">
-    <li *ngFor="let item of todoarray" >
-      <div class="todolist" >
-        <div class="div">{{ item }}</div>
-        <div class="bnt">
-          <button class="btn-floating btn-large waves-effect waves-light blue">
-            <i class="material-icons" (click)="OnComplete()">check</i>
-          </button>
-          <button class="btn-floating btn-large waves-effect waves-light red">
-            <i class="material-icons" (click)="OnDelete()">delete</i>
-          </button>
+
+    <ng-container *ngIf="todoList.length == 0">
+
+      <li>
+        <div class="todolist">
+          <div class="div">
+            <h3>No "ToDo", Don't Forget Your Daily Tasks </h3>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+
+    </ng-container>
+
+    <ng-container *ngIf="todoList.length != 0">
+
+      <li *ngFor="let item of todoList; let i = index">
+        <div class="todolist">
+          <div class="div">{{ item.todoContent }}</div>
+          <div class="bnt">
+            <button class="btn-floating btn-large waves-effect waves-light blue">
+              <i class="material-icons" (click)="OnComplete(i)">check</i>
+            </button>
+            <button class="btn-floating btn-large waves-effect waves-light red">
+              <i class="material-icons" (click)="OnDelete(i)">delete</i>
+            </button>
+          </div>
+        </div>
+      </li>
+
+    </ng-container>
+
   </ul>
+
+<!-- Completed Tasks -->
+
+  <ul class="Content-3">
+
+    <a class="btn-floating btn-large waves-effect waves-light red" ><i class="Medium material-icons">done_all</i></a>
+    <h3 class="Contenttwohead">Completed Tasks</h3>
+
+    <ng-container *ngIf="CompletedList.length == 0">
+
+      <li>
+        <div class="todolist">
+          <div class="div">
+            <h4>Not Yet Completed the Tasks.. Hurry Uppp... </h4>
+          </div>
+        </div>
+      </li>
+
+    </ng-container>
+
+    <ng-container *ngIf="CompletedList.length != 0">
+
+      <li *ngFor="let item of CompletedList ; let i = index">
+        <div class="todolist">
+          <div class="div">{{ item.todoContent }}</div>
+          <div class="bnt">
+            <button class="btn-floating btn-large waves-effect waves-light red">
+              <i class="material-icons" (click)="OnDeleteCompleted(i)">delete</i>
+            </button>
+          </div>
+        </div>
+      </li>
+
+    </ng-container>
+
+  </ul>
+
 </div>
