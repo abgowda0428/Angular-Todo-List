@@ -1,27 +1,23 @@
-# TodoApp
+# Todo List Application with Angular 18
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+This Todo List application is built using **Angular 18** and provides a simple interface for managing tasks. The application allows users to add, delete, and mark tasks as completed . The state of tasks is persisted using **localStorage**, ensuring that the data remains intact even after page reloads.
 
-## Development server
+## Specifications:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Technology Stack:
+- **Frontend**: Angular 18
+- **Data Persistence**: localStorage
 
-## Code scaffolding
+### Features:
+- **Add Tasks**: Users can add new tasks to the todo list.
+- **View Tasks**: The todo list displays both pending and completed tasks.
+- **Delete Tasks**: Users can remove tasks from the list.
+- **Data Persistence**: Tasks are stored in **localStorage**, preserving data even after page reloads.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### CRUD Operations:
+- **Create**: Add new tasks.
+- **Read**: View the current list of tasks.
+- **Delete**: Remove tasks from the list.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Task Status:
+Each task can be marked as "completed" by clicking a button.
